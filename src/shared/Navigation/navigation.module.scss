@@ -1,0 +1,17 @@
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 50px;
+
+    &__item {
+        padding: 2px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            transition: 0.3s;
+            background-color: #eee;
+        }
+    }
+}

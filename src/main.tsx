@@ -1,10 +1,13 @@
 import ReactDOM from 'react-dom/client'
 import App from './app/App.tsx'
-import './index.scss'
+import Layout from './shared/Layout/Layout.tsx'
 import { BrowserRouter } from 'react-router-dom'
+import './app/index.scss'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
-    <App />
+    <Layout>
+      <App />
+    </Layout>
   </BrowserRouter>
 )
