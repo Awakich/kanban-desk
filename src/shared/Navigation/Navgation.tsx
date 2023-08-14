@@ -8,7 +8,7 @@ const Navgation: FC = ({ }) => {
         <nav className={styles.nav}>
             <ul className={styles.list}>
                 {navigation_list.map(({ id, label }) => (
-                    <Link to={`/${label}`}><li className={styles.list__item} key={id}>{label}</li></Link>
+                    <Link key={id} to={`/${label}`}><li className={styles.list__item}>{label}</li></Link>
                 ))}
             </ul>
         </nav>

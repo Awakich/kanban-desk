@@ -3,12 +3,12 @@ import styles from './button.module.scss'
 
 type button = {
     children: ReactNode;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 const Button: FC<button> = ({ children, onClick }) => {
     return (
-        <button onClick={onClick} className={styles.button}>{children}</button>
+        <button onClick={onClick} className={styles.button} type='submit'>{children}</button >
     )
 }
 

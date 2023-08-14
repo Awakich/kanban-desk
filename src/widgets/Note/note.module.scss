@@ -1,0 +1,30 @@
+.notes__element {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.notes__element__date {
+    font-style: italic;
+    color: #7c7c7c;
+}
+
+.notes__element__label {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.notes__element__time {
+    color: #7c7c7c;
+}
+
+.icon {
+    margin-top: 20px;
+    width: 24px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 80%;
+    }
+}

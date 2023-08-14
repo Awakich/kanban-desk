@@ -6,9 +6,9 @@
     &__element {
         padding: 0 20px;
         border-radius: 5px;
-        background-color: #ebebeb;
+        border: 1px solid #ebebeb;
         cursor: pointer;
-        box-shadow: 8px 4px 4px #dfdfdf;
+        box-shadow: 4px 2px 2px #dfdfdf;
 
         &:hover {
             transition: 0.2s;

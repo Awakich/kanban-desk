@@ -23,3 +23,15 @@ export type note = {
     hours: number,
     minutes: number;
 }
+
+export type board = {
+    id?: string,
+    title: string,
+    items: item[]
+}
+
+export type item = {
+    id?: string,
+    title: string,
+    author: string,
+}

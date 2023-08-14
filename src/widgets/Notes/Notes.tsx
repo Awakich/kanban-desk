@@ -12,7 +12,7 @@ const Notes: FC<notes> = ({ notes }) => {
         <ul className={styles.notes}>
             {notes.map(({ id, label, date, hours, minutes, }) => (
                 <li className={styles.notes__element} key={id}>
-                    <Note label={label} date={date} hours={hours} minutes={minutes} />
+                    <Note notes={notes} label={label} date={date} hours={hours} minutes={minutes} />
                 </li>
             ))}
         </ul>

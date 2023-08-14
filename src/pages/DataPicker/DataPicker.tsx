@@ -1,5 +1,5 @@
 import { FC, useState, ChangeEvent } from 'react';
-import { Note } from '../../types/models';
+import { note } from '../../types/models';
 import Button from '../../shared/UI/Button/Button';
 import DatePicker from "react-datepicker";
 import Notes from '../../widgets/Notes/Notes';
@@ -10,7 +10,7 @@ const DataPicker: FC = () => {
     const [startDate, setStartDate] = useState<Date>(new Date());
     const [userInput, setUserInput] = useState<string>("")
 
-    const [notes, setNotes] = useState<Note[]>([])
+    const [notes, setNotes] = useState<note[]>([])
 
     const changeInput = (e: ChangeEvent<HTMLInputElement>) => {
         setUserInput(e.target.value)
