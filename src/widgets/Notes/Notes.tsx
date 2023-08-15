@@ -5,14 +5,15 @@ import Note from '../Note/Note'
 
 type notes = {
     notes: note[]
+    removeNote: (id: string) => void;
 }
 
-const Notes: FC<notes> = ({ notes }) => {
+const Notes: FC<notes> = ({ notes, removeNote }) => {
     return (
         <ul className={styles.notes}>
-            {notes.map(({ id, label, date, hours, minutes, }) => (
+            {notes.map(({ id, label, date, hours, minutes }) => (
                 <li className={styles.notes__element} key={id}>
-                    <Note notes={notes} label={label} date={date} hours={hours} minutes={minutes} />
+                    <Note id={id} label={label} date={date} hours={hours} minutes={minutes} removeNote={removeNote} />
                 </li>
             ))}
         </ul>

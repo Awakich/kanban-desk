@@ -1,9 +1,17 @@
 import { FC } from 'react'
-import { note } from '../../types/models'
 import { XMarkIcon } from '@heroicons/react/20/solid'
 import styles from './note.module.scss'
 
-const Note: FC<note> = ({ label, date, hours, minutes }) => {
+type noteprops = {
+    id?: string,
+    label: string;
+    date: string,
+    hours: number,
+    minutes: number;
+    removeNote: (id: string) => void;
+}
+
+const Note: FC<noteprops> = ({ label, date, hours, minutes, id, removeNote }) => {
     return (
         <div className={styles.notes__element}>
             <div>
@@ -11,7 +19,7 @@ const Note: FC<note> = ({ label, date, hours, minutes }) => {
                 <p className={styles.notes__element__date}>{date}</p>
                 <p className={styles.notes__element__time}>{`${hours}:${minutes}`}</p>
             </div>
-            <XMarkIcon className={styles.icon}/>
+            <XMarkIcon className={styles.icon} onClick={() => removeNote(id as string)} />
         </div>
     )
 }

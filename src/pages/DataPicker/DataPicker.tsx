@@ -1,4 +1,4 @@
-import { FC, useState, ChangeEvent } from 'react';
+import { FC, useState } from 'react';
 import { note } from '../../types/models';
 import Button from '../../shared/UI/Button/Button';
 import DatePicker from "react-datepicker";
@@ -12,11 +12,7 @@ const DataPicker: FC = () => {
 
     const [notes, setNotes] = useState<note[]>([])
 
-    const changeInput = (e: ChangeEvent<HTMLInputElement>) => {
-        setUserInput(e.target.value)
-    }
-
-    const submitHandler = () => {
+    const AddNote = () => {
         const Note = {
             id: (Math.random() * 100).toFixed(12),
             label: userInput,
@@ -28,14 +24,18 @@ const DataPicker: FC = () => {
         setUserInput("")
     }
 
+    const RemoveNote = (id: string) => {
+        setNotes(notes.filter((item) => item.id !== id))
+    }
+
     return (
         <section className={styles.datepicker}>
             <div className={styles.input}>
                 <DatePicker showIcon selected={startDate} onChange={(date: Date) => setStartDate(date)} dateFormat="Pp" showTimeSelect />
-                <input value={userInput} type='search' className={styles.input__element} onChange={changeInput} />
-                <Button onClick={submitHandler}>Отправить</Button>
+                <input value={userInput} type='search' className={styles.input__element} onChange={(e) => setUserInput(e.target.value)} />
+                <Button onClick={AddNote}>Add</Button>
             </div>
-            <Notes notes={notes} />
+            <Notes notes={notes} removeNote={RemoveNote} />
         </section>
     )
 }

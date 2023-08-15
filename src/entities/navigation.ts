@@ -6,9 +6,6 @@ export const navigation_list: navigation[] = [
         label: "GTD",
     }, {
         id: 2,
-        label: "Pomodoro",
-    }, {
-        id: 3,
         label: "DataPicker",
     },
 ]
