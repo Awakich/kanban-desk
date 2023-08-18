@@ -1,14 +1,37 @@
+@import '../../app/index.scss';
+
 .item {
-    font-size: 18px;
-    border-radius: 10px;
-    border: 1px solid #dfdfdf;
+    font-size: $h3;
+    border-radius: $margin;
+    border: $low solid $white_blacker_2;
     margin: 0;
-    padding-left: 20px;
+    padding-left: $gap_padding_low;
     cursor: pointer;
 
+    @media (min-width:360px) {
+        width: 100%;
+        max-width: $eighty;
+    }
+
+    @media (min-width:576px) {
+        width: 100%;
+        max-width: calc($h1*3);
+    }
+
+    @media (min-width:768px) {
+        font-size: $h3;
+        border-radius: $margin;
+        border: $low solid $white_blacker_2;
+        margin: 0;
+        padding-left: $gap_padding_low;
+        cursor: pointer;
+        width: 100%;
+        min-width: 80%;
+    }
+
     &__author {
-        font-size: 16px;
+        font-size: $h4;
         font-style: italic;
-        color: #a3a3a3;
+        color: $gray;
     }
 }

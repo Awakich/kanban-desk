@@ -1,15 +1,18 @@
+@import '../../app/index.scss';
+
 .gtd {
-    padding-top: 20px;
+    padding-top: $gap_padding_low;
     display: flex;
     justify-content: space-between;
     margin: auto;
     height: 80vh;
+    padding-left: $margin;
 }
 
 .board {
     width: 100%;
-    max-width: 300px;
+    max-width: $boards;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: $margin;
 }

@@ -1,3 +1,13 @@
+@import '../../app/index.scss';
+
 .layout {
-    padding: 20px 50px;
+    padding: $gap_padding_low $gap_padding;
+
+    @media (min-width:360px) {
+        padding: $margin 0;
+    }
+
+    @media (min-width:992px) {
+        padding: $gap_padding_low $gap_padding;
+    }
 }

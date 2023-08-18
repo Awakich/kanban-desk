@@ -1,29 +1,25 @@
-.dirty {
-    color: red;
-    font-weight: 400;
-    margin-bottom: 0;
-}
+@import '../../app/index.scss';
 
 .inputs {
-    margin-top: 40px;
+    margin-top: $h1;
     display: flex;
     align-items: end;
-    gap: 20px;
-    font-weight: 700;
+    gap: $gap_padding_low;
+    font-weight: $bold;
 
-    &__title {
+    @media (min-width:300px) {
         display: flex;
         flex-direction: column;
+        align-items: start;
+        padding-left: $margin;
     }
 
-    &__author {
+    @media (min-width:576px) {
+        margin-top: $h1;
         display: flex;
-        flex-direction: column;
-    }
-
-    .input {
-        margin-top: 10px;
-        outline: none;
-        padding: 5px 10px;
+        flex-direction: row;
+        align-items: end;
+        gap: $gap_padding_low;
+        font-weight: $bold;
     }
 }

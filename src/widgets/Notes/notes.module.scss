@@ -1,28 +1,26 @@
+@import '../../app/index.scss';
+
 .notes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: $gap_padding_low;
 
     &__element {
-        padding: 0 20px;
-        border-radius: 5px;
-        border: 1px solid #ebebeb;
+        padding: 0 $gap_padding_low;
+        border-radius: $radius;
+        border: $low solid $gray;
         cursor: pointer;
-        box-shadow: 4px 2px 2px #dfdfdf;
+        box-shadow: $radius $h2 $h2 $white_blacker_2;
 
         &:hover {
             transition: 0.2s;
-            background-color: #dfdfdf;
+            background-color: $white_blacker_2;
         }
 
         &__label {
-            font-size: 14px;
-            font-weight: 600;
-            color: #000;
+            font-size: $p;
+            font-weight: $semibold;
+            color: $black;
         }
-
-        &__date {}
-
-        &__time {}
     }
 }

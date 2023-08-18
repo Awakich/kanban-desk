@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { notes } from '../../types/models'
 import styles from './notes.module.scss'
-import Note from '../Note/Note'
+import Note from '../../shared/UI/Note/Note'
 
 const Notes: FC<notes> = ({ notes }) => {
     return (

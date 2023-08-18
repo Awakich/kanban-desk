@@ -1,14 +1,39 @@
 $black: #000;
+$black_light: #333;
 $white: #fff;
-$gtd_bg: #0079BF;
-$pomodoro_bg: #FA593C;
-$datapicker_bg: #6A28F6;
+$red: red;
+$white_blacker: #eee;
+$white_blacker_2: #dfdfdf;
+$gray: #a3a3a3;
+$gray_light: #7c7c7c;
+
+$h1: 40px;
+$h2: 24px;
+$h3: 18px;
+$h4: 16px;
+$p: 14px;
+
+$home: 350px;
+$boards: 300px;
+$eighty: 80px;
+$gap_padding: 50px;
+$gap_padding_low: 20px;
+$margin: 10px;
+$radius: 4px;
+$box_shadow: 2px;
+$low: 1px;
+
+
+$bold: 700;
+$semibold: 600;
+$normal: 400;
+$medium: 500;
 
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: $normal;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,18 +43,18 @@ $datapicker_bg: #6A28F6;
 }
 
 a {
-  font-weight: 500;
-  color: #000;
+  font-weight: $medium;
+  color: $black;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #333;
+  color: $black_light;
 }
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: $home;
   min-height: 100vh;
 }
 

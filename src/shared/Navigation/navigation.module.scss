@@ -1,17 +1,19 @@
+@import '../../app/index.scss';
+
 .list {
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 50px;
+    gap: $gap_padding;
 
     &__item {
-        padding: 2px 10px;
-        border-radius: 4px;
+        padding: $box_shadow $margin;
+        border-radius: $radius;
         cursor: pointer;
 
         &:hover {
             transition: 0.3s;
-            background-color: #eee;
+            background-color: $white_blacker;
         }
     }
 }

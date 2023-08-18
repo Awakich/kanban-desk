@@ -7,7 +7,7 @@ const Home: FC = () => {
     return (
         <ul className={styles.list}>
             {home_list.map(({ id, label, description, color }) => (
-                <div className={styles.list__item}>
+                <div key={id} className={styles.list__item}>
                     <Link to={`/${label}`}>
                         <li key={id} className={styles.list__item} style={{ backgroundColor: `${color}` }}>
                             <p className={styles.label}>{label}</p>

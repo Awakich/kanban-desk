@@ -2,9 +2,9 @@
 
 .button {
     color: $white;
-    border-radius: 10px;
-    font-size: 16px;
-    padding: 10px 20px;
-    font-weight: 500;
+    border-radius: $margin;
+    font-size: $h4;
+    padding: $margin $gap_padding_low;
+    font-weight: $medium;
     border: none;
 }

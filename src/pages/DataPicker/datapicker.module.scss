@@ -1,18 +1,58 @@
 @import '../../app/index.scss';
 
 .datepicker {
-    margin-top: 40px;
+    margin-top: $h1;
     display: flex;
-    gap: 20px;
+    gap: $gap_padding_low;
     flex-direction: column;
 }
 
 .input {
-    gap: 20px;
+    gap: $gap_padding_low;
     display: flex;
+
+    @media (min-width:360px) {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: $margin;
+    }
+
+    @media (min-width:640px) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @media (min-width:992px) {
+        gap: $gap_padding_low;
+        display: flex;
+    }
 
     &__element {
         width: 100%;
         max-width: 15%;
+
+        @media (min-width:360px) {
+            width: 100%;
+            max-width: 90%;
+            padding: $margin 0;
+        }
+
+        @media (min-width:576px) {
+            width: 100%;
+            max-width: 70%;
+            padding: $margin 0;
+        }
+
+        @media (min-width:640px) {
+            width: 100%;
+            max-width: 50%;
+            padding: $margin 0;
+        }
+
+        @media (min-width:992px) {
+            width: 100%;
+            max-width: 20%;
+        }
     }
 }

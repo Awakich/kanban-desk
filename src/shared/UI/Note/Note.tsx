@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { XMarkIcon } from '@heroicons/react/20/solid'
-import { note } from '../../types/models'
-import { useAppDispatch } from '../../entities/hooks'
-import { removeNote } from '../../entities/slices/notesSlice'
+import { note } from '../../../types/models'
+import { useAppDispatch } from '../../../entities/hooks'
+import { removeNote } from '../../../entities/slices/notesSlice'
 import styles from './note.module.scss'
 
 const Note: FC<note> = ({ label, date, hours, minutes, id }) => {

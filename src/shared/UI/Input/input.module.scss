@@ -1,0 +1,18 @@
+@import '../../../app/index.scss';
+
+.dirty {
+    color: $red;
+    font-weight: $normal;
+    margin-bottom: 0;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    margin-top: $margin;
+    outline: none;
+    padding: $radius $margin;
+}
