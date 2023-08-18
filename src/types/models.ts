@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, DragEvent } from 'react'
 
 export type navigation = {
     id?: number,
@@ -24,6 +24,10 @@ export type note = {
     minutes: number;
 }
 
+export type notes = {
+    notes: note[]
+}
+
 export type board = {
     id?: string,
     title: string,
@@ -34,4 +38,12 @@ export type item = {
     id?: string,
     title: string,
     author: string,
+}
+
+export type items = {
+    item?: item,
+    board: board,
+    dragOverHandler: (e: DragEvent<HTMLDivElement>) => void,
+    dropHandler: (e: DragEvent<HTMLDivElement>, board: board, item: item) => void,
+    dragStartHandler: (board: board, item: item) => void,
 }

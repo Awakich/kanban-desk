@@ -1,0 +1,15 @@
+.gtd {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 80vh;
+}
+
+.board {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

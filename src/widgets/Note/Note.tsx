@@ -1,17 +1,13 @@
 import { FC } from 'react'
 import { XMarkIcon } from '@heroicons/react/20/solid'
+import { note } from '../../types/models'
+import { useAppDispatch } from '../../entities/hooks'
+import { removeNote } from '../../entities/slices/notesSlice'
 import styles from './note.module.scss'
 
-type noteprops = {
-    id?: string,
-    label: string;
-    date: string,
-    hours: number,
-    minutes: number;
-    removeNote: (id: string) => void;
-}
+const Note: FC<note> = ({ label, date, hours, minutes, id }) => {
+    const dispatch = useAppDispatch()
 
-const Note: FC<noteprops> = ({ label, date, hours, minutes, id, removeNote }) => {
     return (
         <div className={styles.notes__element}>
             <div>
@@ -19,7 +15,7 @@ const Note: FC<noteprops> = ({ label, date, hours, minutes, id, removeNote }) =>
                 <p className={styles.notes__element__date}>{date}</p>
                 <p className={styles.notes__element__time}>{`${hours}:${minutes}`}</p>
             </div>
-            <XMarkIcon className={styles.icon} onClick={() => removeNote(id as string)} />
+            <XMarkIcon className={styles.icon} onClick={() => dispatch(removeNote(id))} />
         </div>
     )
 }
